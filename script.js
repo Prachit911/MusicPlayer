@@ -10,56 +10,6 @@ const playlistCache = new Map();
 
 console.log("Let's dive into javascript");
 
-// Notification system for user feedback
-function showNotification(message, type = 'info') {
-  // Create notification element
-  const notification = document.createElement('div');
-  notification.className = `notification ${type}`;
-  notification.textContent = message;
-  notification.style.cssText = `
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    border-radius: 8px;
-    color: white;
-    font-weight: 500;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    max-width: 300px;
-    word-wrap: break-word;
-  `;
-  
-  // Set background color based on type
-  switch(type) {
-    case 'error':
-      notification.style.backgroundColor = '#e74c3c';
-      break;
-    case 'success':
-      notification.style.backgroundColor = '#27ae60';
-      break;
-    default:
-      notification.style.backgroundColor = '#3498db';
-  }
-  
-  document.body.appendChild(notification);
-  
-  // Fade in
-  setTimeout(() => {
-    notification.style.opacity = '1';
-  }, 100);
-  
-  // Remove after 3 seconds
-  setTimeout(() => {
-    notification.style.opacity = '0';
-    setTimeout(() => {
-      if (notification.parentNode) {
-        notification.parentNode.removeChild(notification);
-      }
-    }, 300);
-  }, 3000);
-}
 
 async function getSongs(folder) {
   crntFolder = folder;
@@ -67,7 +17,6 @@ async function getSongs(folder) {
   // Check cache first
   if (playlistCache.has(folder)) {
     Songs = playlistCache.get(folder);
-    showNotification(`Loaded ${folder} from cache`, 'info');
   } else {
     try {
       // Use relative path for GitHub Pages compatibility
@@ -81,12 +30,9 @@ async function getSongs(folder) {
       
       // Cache the result
       playlistCache.set(folder, Songs);
-      showNotification(`Loaded ${folder} successfully`, 'success');
     } catch (error) {
       console.error(`Error loading songs from ${folder}:`, error);
       Songs = [];
-      // Show user-friendly error message
-      showNotification(`Failed to load playlist: ${folder}`, 'error');
     }
   }
 
@@ -125,7 +71,6 @@ const playMusic = (track, pause = false) => {
   currentsong.addEventListener('error', function(e) {
     console.error('Audio loading error:', e);
     console.error('Failed to load:', currentsong.src);
-    showNotification(`Failed to load audio: ${track}`, 'error');
   });
 
   currentsong.addEventListener('loadeddata', function() {
@@ -143,7 +88,6 @@ const playMusic = (track, pause = false) => {
       Play.src = "assets/playbar/pause-stroke-rounded.svg";
     }).catch(error => {
       console.error('Error playing audio:', error);
-      showNotification('Failed to play audio. Please check your connection.', 'error');
     });
   }
 
@@ -223,8 +167,6 @@ async function main() {
     previous = document.getElementById("previous");
     Next = document.getElementById("Next");
 
-    // Show loading notification
-    showNotification('Loading MusicPlayer...', 'info');
 
     // Load playlists first
     await displayAlbums();
@@ -234,13 +176,9 @@ async function main() {
     
     if (Songs.length > 0) {
       playMusic(Songs[0], false); // Start playing automatically
-      showNotification('MusicPlayer ready!', 'success');
-    } else {
-      showNotification('No songs found in default playlist', 'error');
     }
   } catch (error) {
     console.error('Error initializing MusicPlayer:', error);
-    showNotification('Failed to initialize MusicPlayer', 'error');
   }
 
   Play.addEventListener("click", () => {
@@ -249,7 +187,6 @@ async function main() {
         Play.src = "assets/playbar/pause-stroke-rounded.svg";
       }).catch(error => {
         console.error('Error playing audio:', error);
-        showNotification('Failed to play audio', 'error');
       });
     } else {
       currentsong.pause();
@@ -337,84 +274,6 @@ async function main() {
 }
 
 main();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
