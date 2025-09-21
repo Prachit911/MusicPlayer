@@ -1,0 +1,29 @@
+{
+  "name": "musicplayer",
+  "version": "1.0.0",
+  "description": "A modern music player with playlist management and streaming capabilities",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -o",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "echo 'Ready for GitHub Pages deployment'"
+  },
+  "keywords": [
+    "music",
+    "player",
+    "streaming",
+    "playlist",
+    "audio",
+    "web-app"
+  ],
+  "author": "MusicPlayer",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/MusicPlayer.git"
+  },
+  "homepage": "https://yourusername.github.io/MusicPlayer/"
+}
