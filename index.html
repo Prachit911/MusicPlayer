@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="container flex bg-color">
+        <div class="left">
+            <div class="cross pointing">
+                <img class="invert" src="assets/sidebar/cancel.svg" alt="cross">
+            </div>
+            <div class="home bg-grey m-1 rounded p-1">
+                <ul>
+                    <li><img class="invert width" src="assets/navbar/icon.svg" alt="Spotify"></li>
+                    <li><img class="invert width" src="assets/navbar/home.svg" alt="Home">Home</li>
+                    <li><img class="invert width" src="assets/navbar/searchIcon.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+            <div class="Library bg-grey m-1 rounded p-1 ">
+                <div class="heading flex">
+                    <div>
+                        <h3>Your Library</h3>
+                    </div>
+                    <div><img class="invert width" src="assets/sidebar/plus.svg" alt="PLUS"></div>
+                </div>
+
+                <div class="songlist">
+                    <ul>
+                        <!-- Song list in sidebar -->
+
+                    </ul>
+                </div>
+
+                <div class="footer">
+                    <div>
+                        <a class="About" href="https://www.spotify.com/in-en/legal/">
+                            <span>Legal</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="About" href="https://www.spotify.com/in-en/safetyandprivacy/">
+                            <span>Safety &amp; Privacy Center</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="About" href="https://www.spotify.com/in-en/legal/privacy-policy/">
+                            <span>Privacy Policy</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="About" href="https://www.spotify.com/in-en/legal/cookies-policy/">
+                            <span>Cookies</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="About" href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">
+                            <span>About Ads</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a class="About" href="https://www.spotify.com/in-en/accessibility/">
+                            <span>Accessibility</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right bg-grey m-1 rounded p-1">
+            <div class="navBar m-1">
+
+                <div>
+                    <img class=" hamburger invert pointing" src="assets/sidebar/hamburger.svg" alt="hamburger">
+                    <img src="assets/Bar/arrow-left-01-stroke-rounded.svg" alt="Left">
+                    <img class="leftArrow" src="assets/Bar/arrow-left-01-stroke-rounded.svg" alt="Right">
+                </div>
+                <div>
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+            <div class="cardContainer rounded">
+
+                <h2 class="playlist m-1 p-1 ">Your Playlist</h2>
+
+                <div class="CardPlaylists m-1">
+                    <div data-folder="playlist1" class="card rounded m-1 p-1">
+                        <img src="https://i.scdn.co/image/ab67706f0000000271ff720f409999d89f09a8e4" alt="Phonk">
+                        <div class="text1 m-1">Phonk</div>
+                        <div class="text2 m-1 textWidth">The best of your drift</div>
+                        <div class="playbtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <circle cx="12" cy="12" r="10.75" fill="green" />
+                                <path
+                                    d="M9.956,15.386 C9.5,15.079 9.5,14.319 9.5,12.8 L9.5,11.2 C9.5,9.681 9.5,8.921 9.956,8.614 C10.411,8.307 11.035,8.646 12.281,9.326 L13.75,10.126 C15.25,10.944 16,11.353 16,12 C16,12.647 15.25,13.056 13.75,13.874 L12.281,14.674 C11.035,15.354 10.411,15.693 9.956,15.386 Z"
+                                    fill="black" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+                    <div data-folder="playlist2" class="card rounded m-1 p-1">
+                        <img src="https://i.scdn.co/image/ab67706f0000000271ff720f409999d89f09a8e4" alt="Phonk">
+                        <div class="text1 m-1">Phonk</div>
+                        <div class="text2 m-1 textWidth">The best of your drift</div>
+                        <div class="playbtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <circle cx="18" cy="18" r="10.75" fill="#00ff4e" />
+                                <path
+                                    d="M9.956,15.386 C9.5,15.079 9.5,14.319 9.5,12.8 L9.5,11.2 C9.5,9.681 9.5,8.921 9.956,8.614 C10.411,8.307 11.035,8.646 12.281,9.326 L13.75,10.126 C15.25,10.944 16,11.353 16,12 C16,12.647 15.25,13.056 13.75,13.874 L12.281,14.674 C11.035,15.354 10.411,15.693 9.956,15.386 Z"
+                                    fill="black" />
+                            </svg>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="playbar ">
+
+
+
+                <div class="playbuttons m-1 flex justify ">
+                    <div class="SongNameinfo">
+
+                    </div>
+                    <img class="pointing" id="previous" src="assets/playbar/previous-stroke-rounded.svg" alt="Previous">
+                    <img class="pointing" id="Play" src="assets/playbar/play-stroke-rounded.svg" alt="Play">
+                    <img class="pointing" id="Next" src="assets/playbar/next-stroke-rounded.svg" alt="Next">
+                </div>
+
+                <div class="time">00:00/00:00</div>
+                <div class="volume">
+                    <img id="volImg" src="assets/playbar/volume-high-stroke-rounded.svg" alt="Volume">
+                    <input class="volumeRange" type="range" name="Audio">
+                </div>
+
+                <div class="scroller ">
+                    <div class="circle">
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
